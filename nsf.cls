@@ -7,7 +7,7 @@
 % 
 % Parent class
 % 
-\LoadClass[10pt]{article}
+\LoadClass[10pt,twoside]{article}
 
 %
 % Package options
