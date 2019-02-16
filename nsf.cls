@@ -2,37 +2,51 @@
 % Class identification
 % 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{nsf}[2016/12/20 NSF Template]
+\ProvidesClass{nsf}[2019/2/15 NSF Template]
 
 % 
 % Parent class
 % 
-\LoadClass[10pt,twoside]{article}
-
-%
-% Package options
-%
-\def\nsfdocument#1{\gdef\@nsfdocument{#1}}
-\gdef\@nsfdocument{Missing Document Specification}
+\LoadClass[11pt]{article}
 
 % 
 % Packages
 % 
 \RequirePackage{booktabs}
 \RequirePackage[skip=5pt,font=footnotesize]{caption}
-\RequirePackage{fancyhdr}
+\RequirePackage{subcaption}
+\RequirePackage{graphicx}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[margin=1in]{geometry}
 \RequirePackage{tikz}
+\RequirePackage{xspace}
+\RequirePackage{hyperref}
+\hypersetup{pdfborderstyle={/S/U/W 1}}
 
-% 
-% Spacing and style
-% 
-% Headings
-\pagestyle{fancy}
-\renewcommand{\headrulewidth}{.75pt}
-\renewcommand{\footrulewidth}{.75pt}
-\fancyhf{}
-\fancyhead[LE,RO]{\thepage}
-\fancyhead[RE,LO]{\@nsfdocument}
-\fancyfoot[CE,CO]{\@title}
+%
+% Document type
+%
+\newcommand{\nsfdocument}[2][]{%
+  \gdef\@nsfdocumentshow{#1}%
+  \gdef\@nsfdocument{#2}%
+  \hypersetup{pdfsubject={\@nsfdocument}}%
+}
+
+%
+% Title
+%
+\renewcommand{\maketitle}{
+  \def\testshow{show}
+  \ifx\@nsfdocumentshow\testshow
+  \begin{center}
+    \LARGE{\textbf{\@nsfdocument}}
+  \end{center}
+  \fi
+}
+
+%
+% Useful macros
+%
+\newcommand{\me}{Pinciroli\xspace}
+\newcommand{\argos}{ARGoS\xspace}
+\newcommand{\buzz}{Buzz\xspace}
