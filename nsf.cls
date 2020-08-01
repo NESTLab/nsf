@@ -7,7 +7,7 @@
 % 
 % Parent class
 % 
-\LoadClass[11pt]{article}
+\LoadClass[twoside,11pt]{article}
 
 % 
 % Packages
@@ -16,7 +16,7 @@
 \RequirePackage[skip=5pt,font=footnotesize]{caption}
 \RequirePackage{fancyhdr}
 \RequirePackage[T1]{fontenc}
-\RequirePackage[margin=1in]{geometry}
+\RequirePackage[includeheadfoot,margin=1in]{geometry}
 \RequirePackage[pdftex]{graphicx}
 \RequirePackage{mdframed}
 \RequirePackage[numbers]{natbib}
@@ -24,6 +24,13 @@
 \RequirePackage{titlesec}
 \RequirePackage{tikz}
 \RequirePackage[pdfborderstyle={/S/U/W 1}]{hyperref}
+
+%
+% Document type
+%
+\newcommand{\nsfdocument}[1]{%
+  \gdef\@nsfdocument{#1}%
+}
 
 % 
 % Spacing and style
