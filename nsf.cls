@@ -20,6 +20,7 @@
 \RequirePackage[pdftex]{graphicx}
 \RequirePackage{mdframed}
 \RequirePackage[numbers]{natbib}
+\RequirePackage{paralist}
 \RequirePackage{subcaption}
 \RequirePackage{titlesec}
 \RequirePackage{tikz}
