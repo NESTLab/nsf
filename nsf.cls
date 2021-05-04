@@ -65,7 +65,7 @@
 %
 % Title formatting
 %
-\renewcommand{\maketitle}{\begin{center}\LARGE\bfseries\@title\end{center}}
+\renewcommand{\maketitle}{\begin{center}\LARGE\textbf{\@title}\end{center}}
 
 %
 % Framed environments
