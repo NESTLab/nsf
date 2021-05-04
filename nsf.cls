@@ -28,14 +28,14 @@
 %
 % Alphabetical order
 \RequirePackage{booktabs}
-\RequirePackage[skip=5pt,font=footnotesize]{caption}
+\RequirePackage[skip=5pt,font=small]{caption}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[margin=1in]{geometry}
 \RequirePackage[pdftex]{graphicx}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage{listings}
 \RequirePackage{longtable}
-\RequirePackage{mdframed} % for 'nsfframed' environment
+\RequirePackage{mdframed}
 \RequirePackage{multirow}
 \RequirePackage[numbers]{natbib}
 \RequirePackage{paralist}
@@ -50,24 +50,32 @@
 \RequirePackage[pdfborderstyle={/S/U/W 1}]{hyperref} % must be last
 
 % 
-% Spacing and style
+% Spacing
 % 
 % Titles
-\titlespacing{\section}{1ex}{1ex}{1ex}
-\titlespacing{\subsection}{.75ex}{1ex}{.75ex}
-\titlespacing{\subsubsection}{.5ex}{1ex}{.5ex}
-\titlespacing{\paragraph}{0pt}{0pt}{1ex}
+\titlespacing*{\section}{1ex}{1ex}{1ex}
+\titlespacing*{\subsection}{.75ex}{1ex}{.75ex}
+\titlespacing*{\subsubsection}{.5ex}{1ex}{.5ex}
+\titlespacing*{\paragraph}{0pt}{0pt}{1ex}
+% Lists
+\setlist{nosep}
 % Floats
 % TODO
 
 %
-% Framed environment
+% Title formatting
 %
-\newenvironment{nsfframed}[1]{\begin{mdframed}\textbf{#1:}}{\end{mdframed}}
+\renewcommand{\maketitle}{\begin{center}\LARGE\bfseries\@title\end{center}}
+
+%
+% Framed environments
+%
+\newmdenv[backgroundcolor=black!5,frametitle={Research Questions},frametitlebelowskip=0pt]{questions}
 
 % 
 % Useful macros
 %
 \newcommand{\me}{Pinciroli\xspace}
+\newcommand{\copi}{Co-PI\xspace}
 \newcommand{\argos}{ARGoS\xspace}
 \newcommand{\buzz}{Buzz\xspace}
