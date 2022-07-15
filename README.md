@@ -2,32 +2,20 @@
 
 This repository contains the Latex templates for NSF projects.
 
-## Latex Template ##
+## Installation ##
 
-### Installation ###
-
-#### Linux ####
+### Linux ###
 
     $ mkdir -p ~/.texmf/tex/latex/
     $ cd ~/.texmf/tex/latex/
     $ git clone https://github.com/NESTLab/nsf.git
 
-#### MacOSX ####
+### MacOSX ###
 
     $ mkdir -p ~/Library/texmf/tex/latex/
     $ cd ~/Library/texmf/tex/latex/
     $ git clone https://github.com/NESTLab/nsf.git
 
-### Usage ###
+## Usage ##
 
-    \documentclass{nsf}
-
-    % Type of document: project description, data management plan, ...
-    \nsfdocument{Document type}
-    
-    % This will be shown in the page footer
-    \title{Document title}
-    
-    \begin{document}
-    ...
-    \end{document}
+See the provided `example.tex` file.
