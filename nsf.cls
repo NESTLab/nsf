@@ -53,10 +53,10 @@
 % Spacing
 % 
 % Titles
-\titlespacing*{\section}{1ex}{1ex}{1ex}
-\titlespacing*{\subsection}{.75ex}{1ex}{.75ex}
-\titlespacing*{\subsubsection}{.5ex}{1ex}{.5ex}
-\titlespacing*{\paragraph}{0pt}{0pt}{1ex}
+\titlespacing{\section}{1ex}{*1}{*1}
+\titlespacing{\subsection}{.75ex}{*1}{*.75}
+\titlespacing{\subsubsection}{.5ex}{*1}{*.5}
+\titlespacing{\paragraph}{0pt}{0pt}{*1}
 % Lists
 \setlist{nosep}
 % Floats
