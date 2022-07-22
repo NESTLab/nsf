@@ -66,12 +66,12 @@
 %
 % Title formatting
 %
-\renewcommand{\maketitle}{\begin{center}\LARGE\textbf{\@title}\end{center}}
+\renewcommand{\maketitle}{\begin{center}\Large\textbf{\@title}\end{center}}
 
 %
 % Framed environments
 %
-\newmdenv[backgroundcolor=black!5,frametitle={Research Questions},frametitlebelowskip=0pt]{questions}
+\newmdenv[backgroundcolor=black!3,frametitle={Research Questions},frametitlebelowskip=0pt]{questions}
 
 % 
 % Useful macros
