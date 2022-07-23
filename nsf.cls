@@ -42,6 +42,7 @@
 \RequirePackage{subcaption}
 \RequirePackage{titlesec}
 \RequirePackage{tikz}
+\RequirePackage[normalem]{ulem}
 \RequirePackage{wrapfig}
 \RequirePackage{xcolor}
 \RequirePackage{xspace}
