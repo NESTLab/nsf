@@ -27,13 +27,15 @@
 % Packages
 %
 % Alphabetical order
+\RequirePackage[base]{babel} % required by lipsum when using LuaTex
 \RequirePackage{booktabs}
 \RequirePackage[skip=5pt,font=small]{caption}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[margin=1in]{geometry}
-\RequirePackage[pdftex]{graphicx}
-\RequirePackage[utf8]{inputenc}
+\RequirePackage[luatex]{graphicx}
+\RequirePackage{lipsum}
 \RequirePackage{listings}
+\RequirePackage[lighttt]{lmodern}
 \RequirePackage{longtable}
 \RequirePackage{mdframed}
 \RequirePackage{multirow}
@@ -42,6 +44,7 @@
 \RequirePackage{subcaption}
 \RequirePackage{titlesec}
 \RequirePackage{tikz}
+\RequirePackage{todonotes}
 \RequirePackage[normalem]{ulem}
 \RequirePackage{wrapfig}
 \RequirePackage{xcolor}
@@ -73,6 +76,12 @@
 % Framed environments
 %
 \newmdenv[backgroundcolor=black!3,frametitle={Research Questions},frametitlebelowskip=0pt]{questions}
+
+% Make lipsum text gray
+\setlipsum{%
+  par-before = \begingroup\color{gray},
+  par-after = \endgroup
+}
 
 % 
 % Useful macros
